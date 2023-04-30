@@ -45,3 +45,35 @@ b=st.isempty()
 print(b)
 a=st.pop()
 print(a)
+
+=======================================================================
+
+
+class Node:
+    def __init__(self, val, next):
+        self.val=val
+        self.next=next
+class Stack:
+    def __init__(self):
+        self.head=None
+    def push(self,val):
+        if self.head==None:
+            self.head=Node(val,None)
+        else:
+            self.head=Node(val,self.head)
+    def pop(self):
+        if self.head==None:
+            print("out")
+        val=self.head.val
+        self.head=self.head.next
+        return val
+s=Stack()
+s.push(5)
+s.push(4)
+s.push(3)
+a=s.pop()
+print(a)
+a=s.pop()
+print(a)
+a=s.pop()
+print(a)
